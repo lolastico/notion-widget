@@ -1,0 +1,95 @@
+
+	<!-- Google Font -->
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: "DM Sans", serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 1px solid #cccccc;
+			border-radius: 10px;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #EA9AB2;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="accueil" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Accueil</a>
+		<a id="cci" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i> CCI</a>
+		<a id="openclassroom" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i> OpenClassroom</a>
+		<a id="todo" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-list"></i> To Do</a>
+		<a id="documents" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-folder-open"></i> Documents</a>
+
+
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'accueil')
+				window.open("https://www.notion.so/home-of-lolastico-1a49090919be8010a994d0152cd582b3?pvs=4").focus();
+			else if (id == "cci")
+				window.open("https://www.notion.so/14a9090919be80bbb94add7e161f11ba?v=48165b940fbc46d3aacd20de307822f0&pvs=4").focus();
+			else if (id == "openclassroom")
+				window.open("https://www.notion.so/COURS-OPENCLASSROOM-1569090919be80e98125d615766e7725?pvs=4").focus();
+			else if (id == "todo")
+				window.open("https://www.notion.so/TO-DO-14a9090919be8098ad08c5c03e1ae117?pvs=4").focus();
+			else if (id == "documents")
+				window.open("https://www.notion.so/MES-DOCUMENTS-1799090919be806b83dcc0cafd9ec13c?pvs=4").focus();
+
+		}
+	</script>
+
+
+</body>
+
+</html>
